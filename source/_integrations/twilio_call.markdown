@@ -25,7 +25,7 @@ notify:
 
 {% configuration %}
 from_number:
-  description: "An [E.164](https://en.wikipedia.org/wiki/E.164) formatted phone number, like +14151234567. See [Twilio's guide to formatting phone numbers](https://www.twilio.com/help/faq/phone-numbers/how-do-i-format-phone-numbers-to-work-internationally) for more information."
+  description: "An [E.164](https://en.wikipedia.org/wiki/E.164) formatted phone number, like +14151234567. If using a trial account, you must first set up a 'trial number' from the Twilio dashboard and insert that here. See [Twilio's guide to formatting phone numbers](https://www.twilio.com/help/faq/phone-numbers/how-do-i-format-phone-numbers-to-work-internationally) for more information."
   required: true
   type: string
 name:
@@ -37,7 +37,7 @@ name:
 
 ### Usage
 
-Twilio is a notify platform and thus can be controlled by calling the notify service [as described here](/integrations/notify/). It will send a notification to all E.164 phone numbers in the notification **target**. See the notes above regarding the `from_number` configuration variable for information about formatting phone numbers.
+Twilio is a notify platform and thus can be controlled by calling the notify service [as described here](/integrations/notify/). It will send a notification to all E.164 phone numbers in the notification **target**. See the notes above regarding the `from_number` configuration variable for information about formatting phone numbers. Make sure the country is activated from your Twilio dashboard otherwise the service will not work.
 
 ```yaml
 # Example automation notification entry
